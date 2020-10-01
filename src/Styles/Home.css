@@ -1,0 +1,62 @@
+@font-face{
+    font-family:"tomatoes";
+    src:url("../Fonts/Tomatoes.ttf")format("truetype");
+}
+@font-face{
+    font-family:"timeburner";
+    src:url("../Fonts/coves_light-webfont.woff") format("woff");
+}
+
+body{
+    margin:0;
+    padding:0;    
+    font-family:sans-serif;
+    overflow-x: hidden;
+}
+#HomeContainer{
+    color:black;
+    height:100vh;
+    background-color:yellowgreen;
+}
+#name{
+    text-align: center;
+    font-family:"timeburner";
+    font-size:260%;
+    margin-top:12%;
+    margin-left:2%;
+    margin-bottom:2%;
+    
+}
+#occupation{
+    margin-left:41.5%;
+    font-size:170%;
+    margin-bottom:2%;
+    margin-top:-2%;
+    font-family:"timeburner";
+    letter-spacing:2px;
+}
+#banner{
+    margin-left:35%;
+    font-size:130%;
+    font-family:"timeburner";
+    letter-spacing:1.5px;
+    font-style: italic;
+}
+#about-me{
+    margin-left:70%;
+    font-size:125%;
+    display:inline-block;
+}
+#projects{
+    margin-left:10%;
+    font-size:125%;
+    display:inline-block;
+}
+.nav-link{
+    text-decoration:none;
+    margin-top:5%;
+}
+
+.nav-link:hover{
+    color:whitesmoke;
+}
