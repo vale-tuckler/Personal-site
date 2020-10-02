@@ -1,9 +1,9 @@
 @font-face{
-    font-family:"tomatoes";
-    src:url("../Fonts/Tomatoes.ttf")format("truetype");
+    font-family:"trebuchet";
+    src:url("../Fonts/trebuc.woff")format("woff");
 }
 @font-face{
-    font-family:"timeburner";
+    font-family:"coves";
     src:url("../Fonts/coves_light-webfont.woff") format("woff");
 }
 
@@ -16,47 +16,53 @@ body{
 #HomeContainer{
     color:black;
     height:100vh;
-    background-color:yellowgreen;
+    background-color:blueviolet;
 }
 #name{
     text-align: center;
-    font-family:"timeburner";
+    font-family:"trebuchet";
     font-size:260%;
     margin-top:12%;
-    margin-left:2%;
+    margin-left:5%;
     margin-bottom:2%;
     
 }
 #occupation{
-    margin-left:41.5%;
+    margin-left:43%;
     font-size:170%;
     margin-bottom:2%;
-    margin-top:-2%;
-    font-family:"timeburner";
-    letter-spacing:2px;
+    margin-top:1%;
+    font-family:"coves";
+    letter-spacing:2.3px;
 }
 #banner{
-    margin-left:35%;
+    margin-left:38%;
     font-size:130%;
-    font-family:"timeburner";
+    font-family:"coves";
     letter-spacing:1.5px;
     font-style: italic;
 }
 #about-me{
-    margin-left:70%;
+    margin-left:65%;
     font-size:125%;
+    font-family:"coves";
+    font-weight:bold;
     display:inline-block;
 }
 #projects{
     margin-left:10%;
     font-size:125%;
+    font-family:"coves";
+    font-weight:bold;
     display:inline-block;
 }
 .nav-link{
     text-decoration:none;
     margin-top:5%;
+    padding:1%;
 }
 
 .nav-link:hover{
     color:whitesmoke;
+    border: 1.6px solid white;
 }
