@@ -43,26 +43,30 @@ body{
     font-style: italic;
 }
 #about-me{
-    margin-left:65%;
-    font-size:125%;
+    margin-left:12%;
     font-family:"coves";
     font-weight:bold;
     display:inline-block;
+    color:#331343;
+    font-size:130%;
 }
 #projects{
-    margin-left:10%;
-    font-size:125%;
+    margin-left:60%;
     font-family:"coves";
     font-weight:bold;
     display:inline-block;
+    color:#331343;
+    font-size:130%;
 }
 .nav-link{
     text-decoration:none;
     margin-top:5%;
-    padding:1%;
+    padding:1.5%;
+}
+#projects:hover, #about-me:hover{
+    color:whitesmoke;
 }
 
 .nav-link:hover{
-    color:whitesmoke;
     border: 1.6px solid white;
 }

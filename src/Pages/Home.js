@@ -10,11 +10,11 @@ const Home = ()=>{
     let Banner = useRef(null);
 
     function HomeAnimations(){
-        //let Circ = gsap.parseEase("circ.out");
+        
         let mytl = gsap.timeline({delay:1});
         mytl
             .from([AboutLink, ProjectsLink],
-                {visibility:"hidden", duration:2, stagger:0.45, ease:Power4.easeInOut, opacity:0})
+                {visibility:"hidden", duration:2, ease:Power4.easeInOut, stagger:0.45, opacity:0})
             .fromTo(Name, 
                 {visibility:"hidden", opacity:0},
                 {visibility:"visible", opacity:1, duration:1.5, delay:1.5, ease:Power4.easeOut})
@@ -37,10 +37,10 @@ const Home = ()=>{
             <div id="HomeContainer">
                 <nav id="nav">
                     <span id="projects-link-cont">
-                        <a href = "/about-me" className="nav-link" id="projects" ref={link => AboutLink = link}>About me</a>
+                        <a href = "/about-me" className="nav-link" id="about-me" ref={link => AboutLink = link}>About me</a>
                     </span>
                     <span className="about-link-cont">
-                        <a href ="/projects" className="nav-link" id="about-me" ref={link => ProjectsLink = link}>Projects</a>
+                        <a href ="/projects" className="nav-link" id="projects" ref={link => ProjectsLink = link}>Projects</a>
                     </span>                                       
                 </nav>
                 <h1 id="name" ref={n => Name = n}>Valerie Tuckler</h1>

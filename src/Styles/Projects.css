@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
 }
-#projects-container{
+#projectsCont{
     background-color: limegreen;
 }
 .projects-img{
@@ -18,10 +18,14 @@ body{
 #ignacio{
     margin-top:20%;
     border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
 }
 #dogs{
     margin-top:3%;
     border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
 }
 #home-cont{
     margin-left:9%;
