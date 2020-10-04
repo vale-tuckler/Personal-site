@@ -30,10 +30,12 @@ body{
 #home-cont{
     margin-left:9%;
     padding:1%;
+    background-color: limegreen;
 }
 #about-cont{
     margin-left:70%;    
     padding:1%;
+    background-color: limegreen;
 }
 #home-link{
     text-decoration:none;

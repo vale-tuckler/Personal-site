@@ -8,13 +8,13 @@ const AboutMe = () => {
     const Toggle = ()  => setIsOpen(!isOpen);
 
     return(
-       <div className="about-container">
-           <nav>
-               <span id="homeLink">
-                    <a href="/home">Home</a>
+       <div id="aboutContainer">
+           <nav id="aboutNav">
+               <span id="homeContainer">
+                    <a href="/home" id="homeLink" className="link">Home</a>
                </span>
-               <span id="projectsLink">
-                    <a href="/projects">Projects</a>
+               <span id="projectsContainer" className="Linkconts">
+                    <a href="/projects" id="projectsLink" className="link">Projects</a>
                </span>               
            </nav>
             <div id="bioCont">
@@ -23,7 +23,7 @@ const AboutMe = () => {
                         <h1 id="quick-bio" className="main-title">Quick Bio</h1>
                     </span>
                     <section id="textSection">
-                        <p className="text">Web developer/ Software developer based in Mexico, but born in Nicaragua (Central america).</p>
+                        <p className="text" id="bioText">Web developer/ Software developer based in Mexico, but born in Nicaragua (Central america).</p>
                     </section>                      
                 </article>           
                 <article>
@@ -72,8 +72,8 @@ const AboutMe = () => {
                                 enjoying the sense of community that it provided me. 
                                 And I decided I wanted to build platforms so that other people 
                                 also had a chance of sharing their own conspiracy theories 
-                                outside of any social media site, 
-                                and I figured that doing that meant I had to develop a site myself, 
+                                outside of any social media site. 
+                                  I figured that doing that meant I had to develop a site myself, 
                                 so I started learning web development in a very casual and hobby-like manner, 
                                 until a fight happened at home with my dad’s family. 
                                 The house was very small, I knew I was considered an intruder, 
