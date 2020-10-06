@@ -16,15 +16,7 @@ const Projects = () =>{
         
         let PowerTwo = gsap.parseEase("power2.in");
         let Back = gsap.parseEase("back.inOut(1.7)");
-        /*let engTrigger = ScrollTrigger.create({
-            trigger:".projects-img",
-                        start:"top center",
-                        markers:{
-                            startColor:"green",
-                            endColor:"red"
-                        }
-        })*/
-
+        
         let myTL = gsap.timeline({delay:1});
         console.log([homeLink, aboutLink]);
         console.log([engProject, dogsProject]);
@@ -49,10 +41,10 @@ const Projects = () =>{
         <div id="projectsCont">
             <nav id="navigation">
                 <span id="home-cont">
-                    <a href="/home" id="home-link" ref={h => homeLink = h}>Home</a>
+                    <a href="/home" id="home-link" ref={h => homeLink = h} className="navLink">Home</a>
                 </span>
                 <span id="about-cont">
-                    <a href="/about-me" id="about-link" ref={a => aboutLink = a}>About Me</a>                
+                    <a href="/about-me" id="about-link" ref={a => aboutLink = a} className="navLink">About Me</a>                
                 </span>                            
             </nav>
             <div className="projects-img">
@@ -66,7 +58,7 @@ const Projects = () =>{
                 </a>
             </div>
             <div className="back-link-cont">
-                <a href="#navigation" id="back-link"> Go back to top</a>
+                <a href="#navigation" className="back-link" id="backTop"> Go back to top</a>
             </div>            
         </div>
     );
