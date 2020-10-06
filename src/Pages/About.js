@@ -1,11 +1,16 @@
-import React, { useState} from 'react';
+import React, { useState, useRef} from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import '../Styles/About.css';
 
 const AboutMe = () => {
 
+    let InfoBtn = useRef(null);
+
     const[isOpen, setIsOpen] = useState(false);
-    const Toggle = ()  => setIsOpen(!isOpen);
+    const Toggle = ()  => {
+        setIsOpen(!isOpen);
+
+    }
 
     return(
        <div id="aboutContainer">
@@ -41,15 +46,15 @@ const AboutMe = () => {
                             <li className="text">Node.js</li>
                             <li className="text">MongoDB.</li>
                             <li className="text">ExpressJS.</li>
-                            <li className="text">Currently learning Java</li>
+                            <li className="text">Currently learning Java.</li>
                         </ul>
                     </section>
                 </article>  
                 <div id="myJourney">
-                    <Button color="btn btn-outline-danger" onClick={Toggle} style={{marginBottom:"1rem"}}>My Journey</Button>                   
-                    <Collapse isOpen={isOpen}>
-                        <Card>
-                           <CardBody>
+                    <Button color="btn btn-secondary" onClick={Toggle} style={{marginBottom:"1rem"}} ref={btn => InfoBtn = btn} id="InfoButton">My Journey</Button>                   
+                      <Collapse isOpen={isOpen}>
+                        <Card id="card">
+                           <CardBody id="cardBody">
                                 <p className="text">
                                 The journey of becoming a web developer started with the desire 
                                 to become independent from my parents. 
@@ -92,11 +97,13 @@ const AboutMe = () => {
 
                         </Card>
                     </Collapse>
-                </div>
-                    
+                    <a href="/contact">
+                        <button id="contactButton" className=" btn btn-warning">
+                            Contact me
+                        </button>
+                    </a>
+                </div>                    
             </div>           
-           <a href="/contact"><button>Contact me</button></a>
-
        </div>
     );
 }

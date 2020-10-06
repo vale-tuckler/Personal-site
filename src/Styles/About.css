@@ -9,7 +9,7 @@ body{
     height:200vh;
 }
 #quick-bio{
-    text-align: center;
+    text-align:center;
     margin-top:5%;
     font-weight:bold;
     font-size:320%;
@@ -56,4 +56,30 @@ body{
     border: 1.5px solid white;
     opacity:1;
     color: white;
+}
+#InfoButton{
+    margin-left:46%;
+    margin-top:5%;
+    padding: 1%;
+    font-size: 120%;
+}
+#contactButton{
+    padding-left:2%;
+    padding-right:2%;
+    padding-bottom:1%;
+    padding-top:1%;
+    border-radius:5px;
+    margin-top:5%;
+    margin-left:46.6%;
+} 
+#card{
+    margin-left:9%;
+    margin-right:9%;
+}
+#cardBody{
+    margin-left:8%;
+    margin-right:10%;
+}
+#myJourney{
+    background-color: #2ec4b6;
 }
