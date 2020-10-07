@@ -1,14 +1,20 @@
 import React from 'react';
+import '../Styles/Contact.css';
 
 const Contact = () => {
     return(
-        <div className="contact-container">
+        <div id="contactContainer">
             <nav>
-                <a href="/home">Home</a>
-                <a href="/projects">Projects</a>
-
-                <a href="/about-me"><button>About me</button></a>
+                <span>
+                    <a href="/home" id="Homelink" className="Nlink">Home</a>
+                </span>
+                <span>
+                    <a href="/projects" id="Projectslink" className="Nlink">Projects</a>
+                </span>                
             </nav>
+            <div>
+                    Hello
+            </div>                            
         </div>
     );
 }

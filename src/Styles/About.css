@@ -38,16 +38,17 @@ body{
 #homeLink{
     margin-left:16%;
     text-decoration: none;
+    font-size:140%;
 }
 #projectsLink{
     margin-left:55%;
     text-decoration: none;  
+    font-size:140%;
 }
 .link{
     display:inline-block;
     margin-top:5%;
     margin-bottom:3%;
-    font-size:135%;
     color:black;
     opacity:0.4;
     padding:1%;

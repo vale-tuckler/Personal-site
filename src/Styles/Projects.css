@@ -3,7 +3,7 @@ body{
     padding:0;
 }
 #projectsCont{
-    background-color: limegreen;
+    background-color:#EFEA5A;
 }
 .projects-img{
     width:55%;
@@ -30,43 +30,42 @@ body{
 #home-cont{
     margin-left:12%;
     padding:1%;
-    background-color: limegreen;
+    opacity:0.6;
 }
 #about-cont{
     margin-left:60%;    
     padding:1%;
-    background-color: limegreen;
+    opacity:0.6;
 }
 #home-link{
     text-decoration:none;
     padding:1% !important;
-    font-size: 130%;
+    font-size: 140%;
     font-family:"coves";    
-    opacity:0.6;
-    font-weight:bold;
-    color:darkgreen;
+    font-weight:lighter;
+    color: #17183B;
 }
 #about-link{
     text-decoration:none;
-    font-size: 130%;
+    font-size: 140%;
     padding:1%;
     font-family:"coves";
     opacity:0.6;
-    font-weight:bold;
-    color:darkgreen;
+    font-weight:lighter;
+    color: #17183B;
 }
 .navLink{
     display:inline-block;
     margin-top:5%;
 }
 #home-link:hover{
-    color:whitesmoke;
-    border: 1.5px solid white;
+    border: 1.5px solid #17183B;
+    color:#17183B;
     opacity:1;
 }
 #about-link:hover{
-    color:whitesmoke;
-    border: 1.5px solid white;
+    border: 1.5px solid #17183B;
+    color:#17183B;
     opacity:1;
 }
 .back-link-cont{
@@ -74,15 +73,15 @@ body{
     margin-left:48%;
     margin-bottom:2%;
     font-family:"coves";
-    background-color: limegreen;
+    background-color: #EFEA5A;
 }
 .back-link{
     text-decoration:none;
     font-size:120%;
-    background-color: limegreen;
-    color: black;
+    background-color: #EFEA5A;
+    color: #17183B;
 }
 .back-link:hover{
-    color:whitesmoke;
     text-decoration:none;
+
 }

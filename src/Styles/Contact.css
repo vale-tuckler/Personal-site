@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    padding:0;
+}
+#contactContainer{
+    background-color:#f29e4c;
+    height:100vh;
+}
+#Homelink{
+    margin-left:15%;
+}
+#Projectslink{
+    margin-left:58%;
+}
+.Nlink{
+    margin-top:5%;
+    display: inline-block;
+}

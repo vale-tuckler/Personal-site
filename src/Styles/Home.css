@@ -14,14 +14,14 @@ body{
     overflow-x: hidden;
 }
 #HomeContainer{
-    color:black;
+    color:#F564A9;
     height:100vh;
-    background-color:blueviolet;
+    background-color:#A4036F;
 }
 #name{
     text-align: center;
     font-family:"trebuchet";
-    font-size:260%;
+    font-size:300%;
     margin-top:12%;
     margin-left:5%;
     margin-bottom:2%;
@@ -45,18 +45,20 @@ body{
 #about-me{
     margin-left:12%;
     font-family:"coves";
-    font-weight:bold;
+    font-weight:lighter;
     display:inline-block;
-    color:#331343;
-    font-size:130%;
+    color:#F564A9;
+    opacity:0.6;
+    font-size:140%;
 }
 #projects{
     margin-left:60%;
     font-family:"coves";
-    font-weight:bold;
+    font-weight:lighter;
     display:inline-block;
-    color:#331343;
-    font-size:130%;
+    color:#F564A9;
+    opacity:0.6;
+    font-size:140%;
 }
 .nav-link{
     text-decoration:none;
@@ -64,7 +66,8 @@ body{
     padding:1.5%;
 }
 #projects:hover, #about-me:hover{
-    color:whitesmoke;
+    color:white;
+    opacity:0;
 }
 
 .nav-link:hover{
