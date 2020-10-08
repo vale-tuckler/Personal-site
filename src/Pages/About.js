@@ -1,34 +1,59 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useRef, useEffect} from 'react';
+import { gsap, Power3 } from 'gsap';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import '../Styles/About.css';
 
 const AboutMe = () => {
-
-    let InfoBtn = useRef(null);
 
     const[isOpen, setIsOpen] = useState(false);
     const Toggle = ()  => {
         setIsOpen(!isOpen);
 
     }
+    let Homelink = useRef(null);
+    let Projectslink = useRef(null);
+    let InfoBtn = useRef(null);
+    let Quickbio = useRef(null);
+    let Quicktext = useRef(null);
+    let Skills = useRef(null);
+    let Skillstext = useRef(null);
+    
+    function AboutAnimation(){
+            let tl = gsap.timeline({delay:1});            
+            let Circ = gsap.parseEase("circ.out");
+
+            tl
+                .fromTo([Homelink, Projectslink], 
+                    {visibility:"hidden", opacity:0, yPercent:30},
+                    {visibility:"visible", opacity:1, stagger:0.5, yPercent:0, ease:Power3.easeOut, duration:1.5})
+                .fromTo(Quickbio, 
+                    {visibility:"hidden", opacity:0, yPercent:30},
+                    { delay:1,scrollTrigger:{trigger:"#quick-bio", start:"top center"},visibility:"visible", opacity:1, yPercent:0, ease:Circ, duration:1.5})
+                .fromTo(Quicktext,
+                    {visibility:"hidden",opacity:0, xPercent:-15},
+                    {visibility:"visible",opacity:1, duration:1.8, ease:Power3.easeIn, xPercent:0})                    
+    }
+    useEffect(()=>{
+        AboutAnimation();
+    });
 
     return(
        <div id="aboutContainer">
            <nav id="aboutNav">
                <span id="homeContainer">
-                    <a href="/home" id="homeLink" className="link">Home</a>
+                    <a href="/home" id="homeLink" className="link" ref={l => Homelink = l}>Home</a>
                </span>
                <span id="projectsContainer" className="Linkconts">
-                    <a href="/projects" id="projectsLink" className="link">Projects</a>
+                    <a href="/projects" id="projectsLink" className="link" ref={p => Projectslink = p}>Projects</a>
                </span>               
            </nav>
             <div id="bioCont">
                 <article>
                     <span>
-                        <h1 id="quick-bio" className="main-title">Quick Bio</h1>
+                        <h1 id="quick-bio" className="main-title" ref={el => Quickbio = el}>Quick Bio</h1>
                     </span>
                     <section id="textSection">
-                        <p className="text" id="bioText">Web developer/ Software developer based in Mexico, but born in Nicaragua (Central america).</p>
+                        <p className="text" id="bioText" ref={text => Quicktext = text}>Web developer/ Software developer based in Mexico, but born in Nicaragua (Central america).</p>
                     </section>                      
                 </article>           
                 <article>

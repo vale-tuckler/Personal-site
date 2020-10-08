@@ -13,6 +13,8 @@ body{
     margin-top:5%;
     font-weight:bold;
     font-size:320%;
+    visibility:"hidden";
+    opacity:0;
 }
 #bioText{
     margin-left:24%;
