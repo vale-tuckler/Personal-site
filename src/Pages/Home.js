@@ -13,8 +13,9 @@ const Home = ()=>{
         
         let mytl = gsap.timeline({delay:1});
         mytl
-            .from([AboutLink, ProjectsLink],
-                {visibility:"hidden", duration:2, ease:Power4.easeInOut, stagger:0.45, opacity:0})
+            .fromTo([AboutLink, ProjectsLink],
+                {visibility:"hidden", opacity:0},
+                {visibility:"visible", opacity:1, duration:1.5, ease:Power4.easeInOut, stagger:0.5})
             .fromTo(Name, 
                 {visibility:"hidden", opacity:0},
                 {visibility:"visible", opacity:1, duration:1.5, delay:1.5, ease:Power4.easeOut})

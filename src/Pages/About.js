@@ -12,7 +12,6 @@ const AboutMe = () => {
     }
     let Homelink = useRef(null);
     let Projectslink = useRef(null);
-    let InfoBtn = useRef(null);
     let Quickbio = useRef(null);
     let Quicktext = useRef(null);
     let Skills = useRef(null);
@@ -26,12 +25,15 @@ const AboutMe = () => {
                 .fromTo([Homelink, Projectslink], 
                     {visibility:"hidden", opacity:0, yPercent:30},
                     {visibility:"visible", opacity:1, stagger:0.5, yPercent:0, ease:Power3.easeOut, duration:1.5})
-                .fromTo(Quickbio, 
+                .fromTo([Quickbio,Quicktext],
                     {visibility:"hidden", opacity:0, yPercent:30},
-                    { delay:1,scrollTrigger:{trigger:"#quick-bio", start:"top center"},visibility:"visible", opacity:1, yPercent:0, ease:Circ, duration:1.5})
-                .fromTo(Quicktext,
-                    {visibility:"hidden",opacity:0, xPercent:-15},
-                    {visibility:"visible",opacity:1, duration:1.8, ease:Power3.easeIn, xPercent:0})                    
+                    {delay:1,scrollTrigger:{trigger:"#quick-bio", start:"top bottom"},visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
+                .to(Quickbio,{opacity:1, duration:0.0001})                                    
+                .fromTo([Skills,Skillstext],
+                    {visibility:"hidden", opacity:0, yPercent:30},
+                    {delay:1,scrollTrigger:{trigger:"#skills", start:"bottom bottom"},visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
+                .to(Skills, {opacity:1, duration:0.0001});
+                return tl;                   
     }
     useEffect(()=>{
         AboutAnimation();
@@ -58,9 +60,9 @@ const AboutMe = () => {
                 </article>           
                 <article>
                     <span id="skillsCont">
-                        <h1 className="main-title" id="skills">Skills</h1>
+                        <h1 className="main-title" id="skills" ref={el => Skills = el}>Skills</h1>
                     </span>
-                    <section id="skillSection">
+                    <section id="skillSection" ref={elem => Skillstext = elem}>
                         <ul id="listCont">
                             <li className="text">HTML5.</li>
                             <li className="text">CSS3 (Bootstrap and CSS).</li>
@@ -76,7 +78,7 @@ const AboutMe = () => {
                     </section>
                 </article>  
                 <div id="myJourney">
-                    <Button color="btn btn-secondary" onClick={Toggle} style={{marginBottom:"1rem"}} ref={btn => InfoBtn = btn} id="InfoButton">My Journey</Button>                   
+                    <Button color="btn btn-secondary" onClick={Toggle} style={{marginBottom:"1rem"}} id="InfoButton">My Journey</Button>                   
                       <Collapse isOpen={isOpen}>
                         <Card id="card">
                            <CardBody id="cardBody">

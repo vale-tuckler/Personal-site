@@ -4,6 +4,7 @@ body{
 }
 #projectsCont{
     background-color:#EFEA5A;
+    font-family:"coves";
 }
 .projects-img{
     width:55%;
@@ -84,4 +85,15 @@ body{
 .back-link:hover{
     text-decoration:none;
 
+}
+#contactMe{
+    display:block;
+    text-decoration: none;
+    font-size:130%;
+    color: #17183B;
+    margin-bottom:7%;
+    padding:1%;
+}
+#contactMe:hover{
+    text-decoration-line: overline;
 }

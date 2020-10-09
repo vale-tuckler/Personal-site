@@ -57,8 +57,11 @@ const Projects = () =>{
                     <img src={Pretty} alt="Project2" title="My Project 2" id="dogs" ref={D => dogsProject = D}/> 
                 </a>
             </div>
-            <div className="back-link-cont">
-                <a href="#navigation" className="back-link" id="backTop"> Go back to top</a>
+            <span>
+                <a href="/contact" id="contactMe"> Contact me</a>
+            </span>
+            <div className="back-link-cont">            
+                <a href="#navigation" className="back-link" id="backTop"> Go back to top</a>               
             </div>            
         </div>
     );

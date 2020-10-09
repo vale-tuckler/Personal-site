@@ -4,15 +4,41 @@ body{
 }
 #contactContainer{
     background-color:#f29e4c;
-    height:100vh;
+    height:200vh;
+    font-family:"coves";
 }
 #Homelink{
     margin-left:15%;
+    font-size: 140%;
+    font-family:"coves";    
+    font-weight:lighter;
+    color: #17183B;
+    padding:1%;
+    text-decoration:none;
 }
 #Projectslink{
     margin-left:58%;
+    font-size: 140%;
+    font-family:"coves";    
+    font-weight:lighter;
+    color: #17183B;
+    padding:1%;
+    text-decoration:none;
 }
 .Nlink{
     margin-top:5%;
     display: inline-block;
+}
+#Homelink:hover{
+    border: 1.5px solid #17183B;
+}
+#Projectslink:hover{
+    border: 1.5px solid #17183B;
+}
+#smContainer{
+    display:inline-block;
+}
+.sm-icon{
+    width:10%;
+    height:10%;
 }
