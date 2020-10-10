@@ -1,12 +1,20 @@
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
+import Footer from '../Components/Footer.js';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Luxury from '../Images/luxury.png';
 import Pretty from '../Images/pretty-house.jpg';
+import Github from '../Images/github.png';
 import '../Styles/Projects.css';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () =>{
+
+    const [isOpen, setIsOpen] = useState(false);
+    const Toggle = () => setIsOpen(!isOpen);
+
     let homeLink = useRef(null);
     let aboutLink = useRef(null);
     let engProject = useRef(null);
@@ -51,6 +59,28 @@ const Projects = () =>{
                 <a href="/home">
                     <img src={Luxury} alt="Project1" title="My Project" id="ignacio" ref={e => engProject = e}/>
                 </a>
+                <Button color="btn btn-outline-danger" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo">
+                    Project info
+                </Button>
+                    <Collapse isOpen = {isOpen}>
+                        <Card>
+                            <CardBody>
+                                <p>
+                                    This Project was created mainly with ReactJS, specifically, <code>create-react-app </code>
+                                     to help an entreprenurial teacher in a very small country (Nicaragua) have greater reach.
+                                </p>
+                                <p>
+                                    In addition to React, smaller libraries for react were used 
+                                    such as <code>reactstrap, react-router-dom, and GSAP.</code>
+                                </p>
+                                <p>
+                                    <a href="https://github.com/vale-tuckler/prof-ignacio">
+                                        <img src={Github} alt="Github icon" title="Github icon"/>
+                                    </a>
+                                </p>
+                            </CardBody>
+                        </Card>
+                    </Collapse>
             </div>
             <div className="projects-img">
                 <a href="/home">
@@ -59,10 +89,8 @@ const Projects = () =>{
             </div>
             <span>
                 <a href="/contact" id="contactMe"> Contact me</a>
-            </span>
-            <div className="back-link-cont">            
-                <a href="#navigation" className="back-link" id="backTop"> Go back to top</a>               
-            </div>            
+            </span>            
+            <Footer />        
         </div>
     );
 }

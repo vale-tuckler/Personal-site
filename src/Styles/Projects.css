@@ -76,19 +76,17 @@ body{
     font-family:"coves";
     background-color: #EFEA5A;
 }
-.back-link{
-    text-decoration:none;
-    font-size:120%;
-    background-color: #EFEA5A;
-    color: #17183B;
-}
-.back-link:hover{
-    text-decoration:none;
-
+#ProjectInfo{
+    margin-left:85%!important;
+    margin-right:-20%;
+    padding:2%;
+    margin-top:7%;
 }
 #contactMe{
     display:block;
     text-decoration: none;
+    margin-left:46%;
+    margin-top:5%;
     font-size:130%;
     color: #17183B;
     margin-bottom:7%;
