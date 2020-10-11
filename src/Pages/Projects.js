@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Luxury from '../Images/luxury.png';
 import Pretty from '../Images/pretty-house.jpg';
-import Github from '../Images/github.png';
+import blackBuilding from '../Images/silhouette.png';
 import '../Styles/Projects.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,6 +15,12 @@ const Projects = () =>{
     const [isOpen, setIsOpen] = useState(false);
     const Toggle = () => setIsOpen(!isOpen);
 
+    const [Open, setOpen] = useState(false);
+    const Switch = () => setOpen(!Open);
+
+    const [Extended, setIsExt] = useState(false);
+    const Unfold = () => setIsExt(!Extended);
+
     let homeLink = useRef(null);
     let aboutLink = useRef(null);
     let engProject = useRef(null);
@@ -22,7 +28,7 @@ const Projects = () =>{
 
     function ProjectsAnimations(){
         
-        let PowerTwo = gsap.parseEase("power2.in");
+        let PowerTwo = gsap.parseEase("power2.out");
         let Back = gsap.parseEase("back.inOut(1.7)");
         
         let myTL = gsap.timeline({delay:1});
@@ -39,8 +45,10 @@ const Projects = () =>{
             .fromTo(dogsProject,
                     {visibility:"hidden", opacity:0},
                     {scrollTrigger:{trigger:".projects-img", start:"top center"},visibility:"visible", opacity:1, duration:2, delay:1, ease:Back})
+            .then(myTL.kill);
         return myTL;
     }
+
     useEffect(()=>{
         ProjectsAnimations();
     });
@@ -59,11 +67,11 @@ const Projects = () =>{
                 <a href="/home">
                     <img src={Luxury} alt="Project1" title="My Project" id="ignacio" ref={e => engProject = e}/>
                 </a>
-                <Button color="btn btn-outline-danger" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo">
+                <Button color="btn btn-dark" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo" className="infoBtn">
                     Project info
                 </Button>
                     <Collapse isOpen = {isOpen}>
-                        <Card>
+                        <Card className="card">
                             <CardBody>
                                 <p>
                                     This Project was created mainly with ReactJS, specifically, <code>create-react-app </code>
@@ -75,7 +83,8 @@ const Projects = () =>{
                                 </p>
                                 <p>
                                     <a href="https://github.com/vale-tuckler/prof-ignacio">
-                                        <img src={Github} alt="Github icon" title="Github icon"/>
+                                        {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
+                                        Github repo
                                     </a>
                                 </p>
                             </CardBody>
@@ -86,10 +95,61 @@ const Projects = () =>{
                 <a href="/home">
                     <img src={Pretty} alt="Project2" title="My Project 2" id="dogs" ref={D => dogsProject = D}/> 
                 </a>
+                <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">
+                    Project info
+                </Button>
+                <Collapse isOpen={Open}>
+                    <Card className="card">
+                        <CardBody>
+                                <p>
+                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
+                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
+                                </p>
+                                <p>
+                                    In addition, smaller libraries were used 
+                                    such as <code> mongoose, react-router-dom, and GSAP.</code>
+                                </p>
+                                <p>
+                                    <a href="https://github.com/vale-tuckler/Patronato">
+                                        {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
+                                        Github repo
+                                    </a>
+                                </p>
+                        </CardBody>
+                    </Card>
+                </Collapse>
             </div>
-            <span>
+            <div className="projects-img">
+                <a href="https://github.com/vale-tuckler/Jordan">
+                    <img src={blackBuilding} alt="blackbuilding" title="silhouette" id="Jordan"/>
+                </a>
+                <Button color="btn btn-dark" onClick={Unfold} style={{marginBottom:"1rem"}} id="JorProject" className="infoBtn">
+                    Project info
+                </Button>
+                <Collapse isOpen={Extended}>
+                    <Card className="card">
+                        <CardBody>
+                                <p>
+                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
+                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
+                                </p>
+                                <p>
+                                    In addition, smaller libraries were used 
+                                    such as <code> mongoose, react-router-dom, and GSAP.</code>
+                                </p>
+                                <p>
+                                    <a href="https://github.com/vale-tuckler/Patronato">
+                                        {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
+                                        Github repo
+                                    </a>
+                                </p>
+                        </CardBody>
+                    </Card>
+                </Collapse>
+            </div>
+            <div>
                 <a href="/contact" id="contactMe"> Contact me</a>
-            </span>            
+            </div>            
             <Footer />        
         </div>
     );
