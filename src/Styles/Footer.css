@@ -1,0 +1,8 @@
+.contenedor{
+    display:inline;
+    width:20%;
+}
+#github, #mail, #instagram{
+    width:10%;
+    height:10%;
+}
