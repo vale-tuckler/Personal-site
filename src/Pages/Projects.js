@@ -3,8 +3,8 @@ import Footer from '../Components/Footer.js';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Luxury from '../Images/luxury.png';
-import Pretty from '../Images/pretty-house.jpg';
+import Teacher from '../Images/teacher.png';
+import Padebac from '../Images/padebac.png';
 import blackBuilding from '../Images/silhouette.png';
 import '../Styles/Projects.css';
 
@@ -64,8 +64,8 @@ const Projects = () =>{
                 </span>                            
             </nav>
             <div className="projects-img">
-                <a href="/home">
-                    <img src={Luxury} alt="Project1" title="My Project" id="ignacio" ref={e => engProject = e}/>
+                <a href="https://profe-ignacio.web.app/inicio" id="ignacioLink">
+                    <img src={Teacher} alt="Project1" title="English site project" id="ignacio" ref={e => engProject = e}/>
                 </a>
                 <Button color="btn btn-dark" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo" className="infoBtn">
                     Project info
@@ -82,8 +82,7 @@ const Projects = () =>{
                                     such as <code>reactstrap, react-router-dom, and GSAP.</code>
                                 </p>
                                 <p>
-                                    <a href="https://github.com/vale-tuckler/prof-ignacio">
-                                        {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
+                                    <a href="https://github.com/vale-tuckler/prof-ignacio">                                        
                                         Github repo
                                     </a>
                                 </p>
@@ -92,8 +91,8 @@ const Projects = () =>{
                     </Collapse>
             </div>
             <div className="projects-img">
-                <a href="/home">
-                    <img src={Pretty} alt="Project2" title="My Project 2" id="dogs" ref={D => dogsProject = D}/> 
+                <a href="/home" id="dogs">
+                    <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
                 </a>
                 <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">
                     Project info
@@ -110,8 +109,7 @@ const Projects = () =>{
                                     such as <code> mongoose, react-router-dom, and GSAP.</code>
                                 </p>
                                 <p>
-                                    <a href="https://github.com/vale-tuckler/Patronato">
-                                        {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
+                                    <a href="https://github.com/vale-tuckler/Patronato">                                        
                                         Github repo
                                     </a>
                                 </p>
@@ -120,25 +118,27 @@ const Projects = () =>{
                 </Collapse>
             </div>
             <div className="projects-img">
-                <a href="https://github.com/vale-tuckler/Jordan">
-                    <img src={blackBuilding} alt="blackbuilding" title="silhouette" id="Jordan"/>
+                <a href="https://architect-jordan.firebaseapp.com/home.html">
+                    <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan"/>
                 </a>
                 <Button color="btn btn-dark" onClick={Unfold} style={{marginBottom:"1rem"}} id="JorProject" className="infoBtn">
                     Project info
-                </Button>
+                </Button>                
                 <Collapse isOpen={Extended}>
                     <Card className="card">
                         <CardBody>
-                                <p>
-                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
-                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
+                                <p>                                    
+                                    Because art should be done for art's sake, I helped my brother display better his architecture portfolio through the creation
+                                    of a personalized site that's going to help him get a broader reach and a bigger exposure to people who might be
+                                    wanting an architectural design made with a fresh perspective.                                                                                                            
                                 </p>
                                 <p>
-                                    In addition, smaller libraries were used 
-                                    such as <code> mongoose, react-router-dom, and GSAP.</code>
+                                    This Project was created using only HTML, CSS and GSAP (a JavaScript library) to improve my understanding of the
+                                    fundamental technologies upon which the web is built: <code>HTML, CSS </code> & <code>JavaScript. </code> There still
+                                    is a long way to go, because education never stops, but this site is an interesting beginning. <i>Check it out!</i>
                                 </p>
                                 <p>
-                                    <a href="https://github.com/vale-tuckler/Patronato">
+                                    <a href="https://github.com/vale-tuckler/Jordan">
                                         {/*<img src={Github} alt="Github icon" title="Github icon"/>*/}
                                         Github repo
                                     </a>
@@ -146,11 +146,9 @@ const Projects = () =>{
                         </CardBody>
                     </Card>
                 </Collapse>
-            </div>
-            <div>
-                <a href="/contact" id="contactMe"> Contact me</a>
             </div>            
-            <Footer />        
+            <Footer/>                    
+                <a href="/contact" id="contactMe"> Contact me</a>
         </div>
     );
 }

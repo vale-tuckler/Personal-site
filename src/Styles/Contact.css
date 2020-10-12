@@ -38,13 +38,12 @@ body{
 }
 #smContainer{
     display:inline-block;
-}
-.sm-icon{
-    width:10%;
-    height:10%;
+    margin-left:12%;
+    margin-bottom:2%;
 }
 #github, #ig, #mail{
-    width:10%;
+    width:8%;
+    height:8%;
     margin:5%;
 }
 #motto{

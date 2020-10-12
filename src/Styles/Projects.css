@@ -25,15 +25,30 @@ body{
 #dogs{
     margin-top:3%;
     border-radius: 5px;
+    height:15%;
+    width:100%;
+    opacity:1;
+}
+#dogsImg{
+    object-fit: cover;
+    width:100%;
+    height:30%;
     visibility: hidden;
     opacity: 0;
 }
+#dogs:hover{
+    opacity:0.5;
+}
 #Jordan{
-    margin-top:20%;
+    margin-top:5%;
     border-radius:5px;
     width:100%;
     height:100%;
     margin-left:45%;
+    opacity:1;
+}
+#Jordan:hover{
+    opacity: 0.5;
 }
 #home-cont{
     margin-left:12%;
@@ -76,6 +91,12 @@ body{
     color:#17183B;
     opacity:1;
 }
+#ignacioLink{
+    opacity:1;
+}
+#ignacioLink:hover{
+    opacity:0.5;
+}
 #ProjectInfo{
     padding:2%;
     margin-top:7%;
@@ -101,9 +122,10 @@ body{
     font-size:135%;
     font-weight:bold;
     color: #17183B;
-    margin-bottom:7%;
+    /*margin-bottom:7%;*/
     padding:1.8%;
     width:17%;
+    background-color:#EFEA5A;
 }
 #contactMe:hover{
     text-decoration-line: overline;
