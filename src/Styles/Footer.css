@@ -2,7 +2,11 @@
     display:inline;
     width:20%;
 }
-#github, #mail, #instagram{
+#wrapper{
+    margin-left:35%;
+    margin-top:5%;
+}
+#github, #mail, #ig{
     width:10%;
     height:10%;
 }

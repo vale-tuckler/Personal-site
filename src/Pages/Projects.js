@@ -25,6 +25,7 @@ const Projects = () =>{
     let aboutLink = useRef(null);
     let engProject = useRef(null);
     let dogsProject = useRef(null);
+    let archProject = useRef(null);
 
     function ProjectsAnimations(){
         
@@ -38,13 +39,32 @@ const Projects = () =>{
         myTL
             .fromTo([homeLink, aboutLink],
                 {visibility:"hidden", opacity:0},
-                {duration:2, visibility:"visible", opacity:1, ease:PowerTwo, stagger:0.45})
+                {duration:2, visibility:"visible", ease:PowerTwo, stagger:0.45, opacity:1})
             .fromTo(engProject,
                 {visibility:"hidden", opacity:0},
-                {scrollTrigger:{trigger:".projects-img", start:"top center"},visibility:"visible", opacity:1, duration:2, delay:1, ease:Back})
+                {scrollTrigger:{
+                    trigger:"#ignacio", 
+                    start:"top center",
+                    end:"+=100" 
+                },
+                visibility:"visible", opacity:1, duration:1.5, delay:1, ease:Back})
             .fromTo(dogsProject,
                     {visibility:"hidden", opacity:0},
-                    {scrollTrigger:{trigger:".projects-img", start:"top center"},visibility:"visible", opacity:1, duration:2, delay:1, ease:Back})
+                    {scrollTrigger:{
+                        trigger:"#DogsProject", 
+                        start:"top center",
+                        end:"+=100" 
+                    },
+                    visibility:"visible", opacity:1, duration:1.5, delay:1, ease:Back})
+            .fromTo(archProject,
+                    {visibility:"hidden", opacity:0}, 
+                    {scrollTrigger:{
+                        trigger:"#Jordan",
+                        start:"top center",
+                        end:"+=100"
+                    },
+                    visibility:"visible", ease:Back, opacity:1, duration:1.5
+                })
             .then(myTL.kill);
         return myTL;
     }
@@ -118,8 +138,8 @@ const Projects = () =>{
                 </Collapse>
             </div>
             <div className="projects-img">
-                <a href="https://architect-jordan.firebaseapp.com/home.html">
-                    <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan"/>
+                <a href="https://architect-jordan.firebaseapp.com/home.html" id="jor">
+                    <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan" ref={J => archProject = J}/>
                 </a>
                 <Button color="btn btn-dark" onClick={Unfold} style={{marginBottom:"1rem"}} id="JorProject" className="infoBtn">
                     Project info
