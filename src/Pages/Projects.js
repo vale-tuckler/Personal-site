@@ -40,10 +40,10 @@ const Projects = () =>{
             .fromTo([homeLink, aboutLink],
                 {visibility:"hidden", opacity:0},
                 {duration:2, visibility:"visible", ease:PowerTwo, stagger:0.45, opacity:1})
-            .fromTo(engProject,
+            .fromTo(archProject,
                 {visibility:"hidden", opacity:0},
                 {scrollTrigger:{
-                    trigger:"#ignacio", 
+                    trigger:"#Jordan", 
                     start:"top center",
                     end:"+=100" 
                 },
@@ -52,16 +52,15 @@ const Projects = () =>{
                     {visibility:"hidden", opacity:0},
                     {scrollTrigger:{
                         trigger:"#DogsProject", 
-                        start:"top center",
+                        start:"top bottom",
                         end:"+=100" 
                     },
-                    visibility:"visible", opacity:1, duration:1.5, delay:1, ease:Back})
-            .fromTo(archProject,
+                    visibility:"visible", opacity:1, duration:1.5, delay:1.5, ease:Back})
+            .fromTo(engProject,
                     {visibility:"hidden", opacity:0}, 
                     {scrollTrigger:{
-                        trigger:"#Jordan",
-                        start:"top center",
-                        end:"+=100"
+                        trigger:"#ignacio",
+                        start:"top bottom",                        
                     },
                     visibility:"visible", ease:Back, opacity:1, duration:1.5
                 })
@@ -83,60 +82,10 @@ const Projects = () =>{
                     <a href="/about-me" id="about-link" ref={a => aboutLink = a} className="navLink">About Me</a>                
                 </span>                            
             </nav>
-            <div className="projects-img">
-                <a href="https://profe-ignacio.web.app/inicio" id="ignacioLink">
-                    <img src={Teacher} alt="Project1" title="English site project" id="ignacio" ref={e => engProject = e}/>
-                </a>
-                <Button color="btn btn-dark" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo" className="infoBtn">
-                    Project info
-                </Button>
-                    <Collapse isOpen = {isOpen}>
-                        <Card className="card">
-                            <CardBody>
-                                <p>
-                                    This Project was created mainly with ReactJS, specifically, <code>create-react-app </code>
-                                     to help an entreprenurial teacher in a very small country (Nicaragua) have greater reach.
-                                </p>
-                                <p>
-                                    In addition to React, smaller libraries for react were used 
-                                    such as <code>reactstrap, react-router-dom, and GSAP.</code>
-                                </p>
-                                <p>
-                                    <a href="https://github.com/vale-tuckler/prof-ignacio">                                        
-                                        Github repo
-                                    </a>
-                                </p>
-                            </CardBody>
-                        </Card>
-                    </Collapse>
-            </div>
-            <div className="projects-img">
-                <a href="/home" id="dogs">
-                    <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
-                </a>
-                <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">
-                    Project info
-                </Button>
-                <Collapse isOpen={Open}>
-                    <Card className="card">
-                        <CardBody>
-                                <p>
-                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
-                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
-                                </p>
-                                <p>
-                                    In addition, smaller libraries were used 
-                                    such as <code> mongoose, react-router-dom, and GSAP.</code>
-                                </p>
-                                <p>
-                                    <a href="https://github.com/vale-tuckler/Patronato">                                        
-                                        Github repo
-                                    </a>
-                                </p>
-                        </CardBody>
-                    </Card>
-                </Collapse>
-            </div>
+
+            
+            {/* JORDAN'S PROJECT */}
+
             <div className="projects-img">
                 <a href="https://architect-jordan.firebaseapp.com/home.html" id="jor">
                     <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan" ref={J => archProject = J}/>
@@ -167,6 +116,66 @@ const Projects = () =>{
                     </Card>
                 </Collapse>
             </div>            
+
+        {/* PADEBAC'S PROJECT  */}
+
+        <div className="projects-img">
+                <a href="/home" id="dogs">
+                    <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
+                </a>
+                <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">
+                    Project info
+                </Button>
+                <Collapse isOpen={Open}>
+                    <Card className="card">
+                        <CardBody>
+                                <p>
+                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
+                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
+                                </p>
+                                <p>
+                                    In addition, smaller libraries were used 
+                                    such as <code> mongoose, react-router-dom, and GSAP.</code>
+                                </p>
+                                <p>
+                                    <a href="https://github.com/vale-tuckler/Patronato">                                        
+                                        Github repo
+                                    </a>
+                                </p>
+                        </CardBody>
+                    </Card>
+                </Collapse>
+            </div>
+
+            {/* IGNACIO'S PROJECT */}            
+
+            <div className="projects-img">
+                <a href="https://profe-ignacio.web.app/inicio" id="ignacioLink">
+                    <img src={Teacher} alt="Project1" title="English site project" id="ignacio" ref={e => engProject = e}/>
+                </a>
+                <Button color="btn btn-dark" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo" className="infoBtn">
+                    Project info
+                </Button>
+                    <Collapse isOpen = {isOpen}>
+                        <Card className="card">
+                            <CardBody>
+                                <p>
+                                    This Project was created mainly with ReactJS, specifically, <code>create-react-app </code>
+                                     to help an entreprenurial teacher in a very small country (Nicaragua) have greater reach.
+                                </p>
+                                <p>
+                                    In addition to React, smaller libraries for react were used 
+                                    such as <code>reactstrap, react-router-dom, and GSAP.</code>
+                                </p>
+                                <p>
+                                    <a href="https://github.com/vale-tuckler/prof-ignacio">                                        
+                                        Github repo
+                                    </a>
+                                </p>
+                            </CardBody>
+                        </Card>
+                    </Collapse>
+            </div>
             <Footer/>                    
                 <a href="/contact" id="contactMe"> Contact me</a>
         </div>

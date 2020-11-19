@@ -8,14 +8,14 @@ const Footer = () => {
     return(
         <div className="contenedor">
             <div id="wrapper">
-                <a href="/inicio">
-                    <img src={Github} alt="Github icon" title ="Github icon" id="github"/>
+                <a href="https://github.com/vale-tuckler">
+                    <img src={Github} alt="Github icon" title ="My Github profile" id="github"/>
                 </a>
-                <a href="/inicio">
-                    <img src={Instagram} alt="Instagram icon" title ="Instagram icon" id="ig"/>
+                <a href="https://www.instagram.com/loveforcode/">
+                    <img src={Instagram} alt="Instagram icon" title ="My Instagram profile" id="ig"/>
                 </a>
-                <a href="/inicio">
-                    <img src={Mail} alt="Mail icon" title ="Mail icon" id="mail"/>
+                <a href="mailto:valerietuckler@gmail.com">
+                    <img src={Mail} alt="Mail icon" title ="My email" id="mail"/>
                 </a>
             </div>            
         </div>

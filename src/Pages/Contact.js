@@ -56,8 +56,8 @@ const Contact = () => {
             </div>
             <div id="smContainer">
                 <a href="https://github.com/vale-tuckler" className="sm-icon" id="github"><img src={Github} alt="Github icon" title="Github icon" id="github" ref={g => github = g}/></a>
-                <a href="https://github.com/vale-tuckler" className="sm-icon" id="ig"><img src={IG} alt="Instagram icon" title="Instagram icon" id="ig" ref={ig => instagram = ig}/></a>
-                <a href="https://github.com/vale-tuckler" className="sm-icon" id="mail"><img src={Mail} alt="Mail icon" title="Mail icon" id="mail" ref={M => mail = M}/></a>
+                <a href="https://www.instagram.com/loveforcode/" className="sm-icon" id="ig"><img src={IG} alt="Instagram icon" title="Instagram icon" id="ig" ref={ig => instagram = ig}/></a>
+                <a href="mailto:valerietuckler@gmail.com" className="sm-icon" id="mail"><img src={Mail} alt="Mail icon" title="Mail icon" id="mail" ref={M => mail = M}/></a>
             </div>                       
         </div>
     );
