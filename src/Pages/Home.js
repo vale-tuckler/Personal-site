@@ -15,16 +15,16 @@ const Home = ()=>{
         mytl
             .fromTo([AboutLink, ProjectsLink],
                 {visibility:"hidden", opacity:0},
-                {visibility:"visible", opacity:1, duration:1.5, ease:Power4.easeInOut, stagger:0.5})
+                {visibility:"visible", opacity:1, duration:1, ease:Power4.easeInOut, stagger:0.5})
             .fromTo(Name, 
                 {visibility:"hidden", opacity:0},
-                {visibility:"visible", opacity:1, duration:1.5, delay:1.5, ease:Power4.easeOut})
+                {visibility:"visible", opacity:1, duration:1, delay:1, ease:Power4.easeOut})
             .fromTo(Occupation, 
                 {visibility:"hidden", opacity:0, xPercent:-20}, 
-                {visibility:"visible", opacity:1, duration:1.5, delay:0.5, xPercent:0})
+                {visibility:"visible", opacity:1, duration:1, delay:0.5, xPercent:0})
             .fromTo(Banner, 
                 {visibility:"hidden", opacity:0, xPercent:20},
-                {visibility:"visible", opacity:1, duration:1.5, delay:0.5, xPercent:0});
+                {visibility:"visible", opacity:1, duration:1, delay:0.5, xPercent:0});
 
 
         return mytl;

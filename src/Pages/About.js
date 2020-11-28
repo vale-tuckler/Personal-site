@@ -15,29 +15,48 @@ const AboutMe = () => {
     let Quickbio = useRef(null);
     let Quicktext = useRef(null);
     let Skills = useRef(null);
-    let Skillstext = useRef(null);
+    let Skillstext = useRef(null);    
     
     function AboutAnimation(){
-            let tl = gsap.timeline({delay:1});            
-            let Circ = gsap.parseEase("circ.out");
 
-            tl
-                .fromTo([Homelink, Projectslink], 
-                    {visibility:"hidden", opacity:0, yPercent:30},
-                    {visibility:"visible", opacity:1, stagger:0.5, yPercent:0, ease:Power3.easeOut, duration:1.5})
+        let Circ = gsap.parseEase("circ.out");
+
+        function Intro(){
+            let Intro = gsap.timeline({repeat:0}); 
+            Intro
+            .fromTo([Homelink, Projectslink], 
+                {visibility:"hidden", opacity:0, yPercent:30},
+                {visibility:"visible", opacity:1, stagger:0.5, yPercent:0, ease:Power3.easeOut, duration:1, delay:0.5});
+            return Intro;            
+        }
+
+        function End(){
+            let End = gsap.timeline({delay:0.5, repeat:0, scrollTrigger:{trigger:"#quick-bio", start:"top bottom"}});            
+            End
                 .fromTo([Quickbio,Quicktext],
                     {visibility:"hidden", opacity:0, yPercent:30},
-                    {delay:1,scrollTrigger:{trigger:"#quick-bio", start:"top bottom"},visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
-                .to(Quickbio,{opacity:1, duration:0.0001})                                    
+                    {delay:1,visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
+                .to(Quickbio,{opacity:1, duration:0.0001}) /* In this tween was the first scrollTrigger */
                 .fromTo([Skills,Skillstext],
                     {visibility:"hidden", opacity:0, yPercent:30},
-                    {delay:1,scrollTrigger:{trigger:"#skills", start:"bottom bottom"},visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
-                .to(Skills, {opacity:1, duration:0.0001});
-                return tl;                   
+                    {delay:1,visibility:"visible", opacity:0.7, stagger:0.5,yPercent:0, ease:Circ, duration:1.5})
+                .to(Skills, {opacity:1, duration:0.0001})
+            return End;            
+        }
+
+            //let tl = gsap.timeline({delay:1, repeat:0, scrollTrigger:{trigger:"#quick-bio", start:"top bottom"}});            
+              let Master = gsap.timeline();
+              Master
+                .add(Intro())
+                .add(End())
+
+                return Master;                 
     }
+
+    const Rerun = false;
     useEffect(()=>{
-        AboutAnimation();
-    });
+        AboutAnimation();             
+    }, [Rerun]);
 
     return(
        <div id="aboutContainer">
@@ -71,14 +90,13 @@ const AboutMe = () => {
                             <li className="text">GSAP products.</li>
                             <li className="text">Version Control with Git & GitHub.</li>
                             <li className="text">Node.js</li>
-                            <li className="text">MongoDB.</li>
-                            <li className="text">ExpressJS.</li>
-                            <li className="text">Currently learning Java.</li>
+                            <li className="text">MongoDB.</li>                            
+                            <li className="text">Currently learning Java & ExpressJS.</li>
                         </ul>
                     </section>
                 </article>  
                 <div id="myJourney">
-                    <Button color="btn btn-secondary" onClick={Toggle} style={{marginBottom:"1rem"}} id="InfoButton">My Journey</Button>                   
+                    <Button color="btn btn-warning" onClick={Toggle} style={{marginBottom:"1rem"}} id="InfoButton">My Journey</Button>                   
                       <Collapse isOpen={isOpen}>
                         <Card id="card">
                            <CardBody id="cardBody">
@@ -124,10 +142,8 @@ const AboutMe = () => {
 
                         </Card>
                     </Collapse>
-                    <a href="/contact">
-                        <button id="contactButton" className=" btn btn-warning">
+                    <a href="/contact" id="contactLink">                        
                             Contact me
-                        </button>
                     </a>
                 </div>                    
             </div>           

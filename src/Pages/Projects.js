@@ -29,8 +29,8 @@ const Projects = () =>{
 
     function ProjectsAnimations(){
         
-        let PowerTwo = gsap.parseEase("power2.out");
-        let Back = gsap.parseEase("back.inOut(1.7)");
+        let PowerTwo = gsap.parseEase("power2.out");        
+        let Sine = gsap.parseEase("sine.out");
         
         let myTL = gsap.timeline({delay:1});
         console.log([homeLink, aboutLink]);
@@ -47,7 +47,7 @@ const Projects = () =>{
                     start:"top center",
                     end:"+=100" 
                 },
-                visibility:"visible", opacity:1, duration:1.5, delay:1, ease:Back})
+                visibility:"visible", opacity:1, duration:1, delay:0.5, ease:Sine})
             .fromTo(dogsProject,
                     {visibility:"hidden", opacity:0},
                     {scrollTrigger:{
@@ -55,22 +55,22 @@ const Projects = () =>{
                         start:"top bottom",
                         end:"+=100" 
                     },
-                    visibility:"visible", opacity:1, duration:1.5, delay:1.5, ease:Back})
+                    visibility:"visible", opacity:1, duration:1, delay:0.5, ease:Sine})
             .fromTo(engProject,
                     {visibility:"hidden", opacity:0}, 
                     {scrollTrigger:{
                         trigger:"#ignacio",
                         start:"top bottom",                        
                     },
-                    visibility:"visible", ease:Back, opacity:1, duration:1.5
+                    visibility:"visible", ease:Sine, opacity:1, duration:1, delay:0.5
                 })
             .then(myTL.kill);
         return myTL;
     }
-
-    useEffect(()=>{
+        const Rerun = false;
+       useEffect(() =>{
         ProjectsAnimations();
-    });
+       },[Rerun])
 
     return(
         <div id="projectsCont">
@@ -120,7 +120,7 @@ const Projects = () =>{
         {/* PADEBAC'S PROJECT  */}
 
         <div className="projects-img">
-                <a href="/home" id="dogs">
+                <a href="https://padebac.web.app/inicio" id="dogs">
                     <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
                 </a>
                 <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">

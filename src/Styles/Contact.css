@@ -3,7 +3,8 @@ body{
     padding:0;
 }
 #contactContainer{
-    background-color:#f29e4c;
+    /*background-color:#f29e4c;*/
+    background-color: #4361ee;
     height:110vh;
     font-family:"coves";
 }
@@ -38,14 +39,19 @@ body{
 }
 #smContainer{
     display:inline-block;
-    margin-left:12%;
+    margin-left:25%;
     margin-bottom:2%;
 }
 #github, #ig, #mail{
     width:8%;
     height:8%;
     margin:5%;
+    opacity:1;
 }
+.sm-icon:hover{
+    opacity:0.5;
+}
+
 #motto{
     margin-left:30%;
     margin-top:5%;

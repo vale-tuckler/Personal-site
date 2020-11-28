@@ -25,13 +25,13 @@ const Contact = () => {
                 {visibility:"visible", opacity:1, yPercent:0, duration:1, stagger:0.5, ease:Circ})
             .fromTo(motto,
                 {visibility:"hidden", opacity:0},
-                {visibility:"visible", opacity:1, duration:1.5, ease:Power3.easeOut, delay:0.6})
+                {visibility:"visible", opacity:1, duration:1, ease:Power3.easeOut, delay:0.6})
             .fromTo(description, 
                 {visibility:"hidden", opacity:0}, 
                 {visibility:"visible", opacity:1, duration:1, ease:Power3.easeIn})
             .fromTo([github, instagram, mail],
                 {visibility:"hidden", opacity:0},
-                {visibility:"visible", opacity:1, duration:1.5, ease:Expo, stagger:0.4, delay:0.5})
+                {visibility:"visible", opacity:1, duration:1.2, ease:Expo, stagger:0.4, delay:0.5})
 
         return tl;
     }
