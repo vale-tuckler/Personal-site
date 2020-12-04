@@ -73,15 +73,15 @@ body{
     padding: 1%;
     font-size: 120%;
 }
+#link-container{
+    margin-top:10%;
+}
 #contactLink{
-    margin-left:46.6%;
-    margin-top:15%!important;
+    margin-left:44%;
     font-size:160%;
     padding-left:2%;
     padding-right:2%;
     padding-bottom:1%;
-    padding-top:1%;
-    border-radius:5px;
     letter-spacing:1px;
     color:white;
 } 

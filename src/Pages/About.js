@@ -142,9 +142,11 @@ const AboutMe = () => {
 
                         </Card>
                     </Collapse>
-                    <a href="/contact" id="contactLink">                        
-                            Contact me
-                    </a>
+                    <div id="link-container">
+                        <a href="/contact" id="contactLink">                        
+                                Contact me
+                        </a>
+                    </div>                    
                 </div>                    
             </div>           
        </div>
