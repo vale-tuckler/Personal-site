@@ -90,7 +90,11 @@ const AboutMe = () => {
                             <li className="text">GSAP products.</li>
                             <li className="text">Version Control with Git & GitHub.</li>
                             <li className="text">Node.js</li>
-                            <li className="text">MongoDB.</li>                            
+                            <li className="text">
+                                <a href="https://university.mongodb.com/course_completion/995933e5-b14c-4975-a9ae-fb5abbd4f94b?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing">
+                                MongoDB.
+                                </a>
+                            </li>                            
                             <li className="text">Currently learning Java & ExpressJS.</li>
                         </ul>
                     </section>

@@ -130,8 +130,18 @@ const Projects = () =>{
                     <Card className="card">
                         <CardBody>
                                 <p>
-                                    This Project was created using ReactJS with the help of Node.js and MongoDB, to help a non-profit organization 
-                                    reach faster their goal of rescuing street pets and providing a safe home for them.                                     
+                                PADEBAC Stands for "Patronato para la Defensa y Bienestar Animal de Coahuila" 
+                                which is a "Board of Trustees for the Defense and Welfare of Animals" 
+                                and it is a project aimed at the facilitating the process of street pets finding a home. 
+                                There's a Home page, a "Report Abuse" page and many more features that 
+                                I think will make it easier for pets to find owners that will provide 
+                                the fundamental needs of love and care that they lacked at the beginning or middle of their lives.
+                                I believe everyone deserves a second chance, especially abandoned pets.
+                                I created this project for that reason.                                
+                                </p>
+                                <p>                                
+                                    Made with love for those who need it,
+                                    This project includes ReactJS with the help of Node.js and MongoDB.
                                 </p>
                                 <p>
                                     In addition, smaller libraries were used 
@@ -160,8 +170,17 @@ const Projects = () =>{
                         <Card className="card">
                             <CardBody>
                                 <p>
-                                    This Project was created mainly with ReactJS, specifically, <code>create-react-app </code>
-                                     to help an entreprenurial teacher in a very small country (Nicaragua) have greater reach.
+                                    Education is such an important component of our lives, that I decided
+                                    I was going to help this teacher spread his influence on his community so that
+                                    more students could learn something so apparently simple and irrelevant
+                                    but very important to the exploration of the world. That is, a second language,
+                                    and more specifically, English. The project contains a "Home", "About Me", "Contact me" and a 
+                                    prices page that includes the several of the 
+                                    classes' content so that students can get a feel for what they will get with the teacher.
+                                </p>
+                                <p>
+                                     This project was created with the help of React to make
+                                     an entreprenurial teacher in Nicaragua have greater reach.
                                 </p>
                                 <p>
                                     In addition to React, smaller libraries for react were used 
