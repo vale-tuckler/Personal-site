@@ -23,6 +23,9 @@ const Projects = () =>{
 
     let homeLink = useRef(null);
     let aboutLink = useRef(null);
+    let archButton = useRef(null);
+    let engButton = useRef(null);
+    let dogsButton = useRef(null);
     let engProject = useRef(null);
     let dogsProject = useRef(null);
     let archProject = useRef(null);
@@ -40,7 +43,7 @@ const Projects = () =>{
             .fromTo([homeLink, aboutLink],
                 {visibility:"hidden", opacity:0},
                 {duration:2, visibility:"visible", ease:PowerTwo, stagger:0.45, opacity:1})
-            .fromTo(archProject,
+            .fromTo([archProject, archButton],
                 {visibility:"hidden", opacity:0},
                 {scrollTrigger:{
                     trigger:"#Jordan", 
@@ -48,7 +51,7 @@ const Projects = () =>{
                     end:"+=100" 
                 },
                 visibility:"visible", opacity:1, duration:1, delay:0.5, ease:Sine})
-            .fromTo(dogsProject,
+            .fromTo([dogsProject, dogsButton],
                     {visibility:"hidden", opacity:0},
                     {scrollTrigger:{
                         trigger:"#DogsProject", 
@@ -56,7 +59,7 @@ const Projects = () =>{
                         end:"+=100" 
                     },
                     visibility:"visible", opacity:1, duration:1, delay:0.5, ease:Sine})
-            .fromTo(engProject,
+            .fromTo([engProject, engButton],
                     {visibility:"hidden", opacity:0}, 
                     {scrollTrigger:{
                         trigger:"#ignacio",
@@ -87,11 +90,18 @@ const Projects = () =>{
             {/* JORDAN'S PROJECT */}
 
             <div className="projects-img">
-                <a href="https://architect-jordan.firebaseapp.com/home.html" id="jor">
+                <a href="https://architect-jordan.firebaseapp.com/home.html" id="jorImg">
                     <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan" ref={J => archProject = J}/>
                 </a>
-                <Button color="btn btn-dark" onClick={Unfold} style={{marginBottom:"1rem"}} id="JorProject" className="infoBtn">
-                    Project info
+                <Button 
+                    color="btn btn-dark" 
+                    onClick={Unfold} 
+                    style={{marginBottom:"1rem"}} 
+                    id="JorProjectDesc" 
+                    className="infoBtn" 
+                    ref={A => archButton = A }
+                >
+                        Project info
                 </Button>                
                 <Collapse isOpen={Extended}>
                     <Card className="card">
@@ -123,8 +133,15 @@ const Projects = () =>{
                 <a href="https://padebac.web.app/inicio" id="dogs">
                     <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
                 </a>
-                <Button color="btn btn-dark" onClick={Switch} style={{marginBottom:"1rem"}} id="DogsProject" className="infoBtn">
-                    Project info
+                <Button 
+                    color="btn btn-dark" 
+                    onClick={Switch} 
+                    style={{marginBottom:"1rem"}} 
+                    id="DogsProjectDesc" 
+                    className="infoBtn"
+                    ref={X => dogsButton = X}
+                >
+                        Project info
                 </Button>
                 <Collapse isOpen={Open}>
                     <Card className="card">
@@ -163,7 +180,14 @@ const Projects = () =>{
                 <a href="https://profe-ignacio.web.app/inicio" id="ignacioLink">
                     <img src={Teacher} alt="Project1" title="English site project" id="ignacio" ref={e => engProject = e}/>
                 </a>
-                <Button color="btn btn-dark" onClick={Toggle} style={{marginBottom:"1rem"}} id="ProjectInfo" className="infoBtn">
+                <Button 
+                    color="btn btn-dark" 
+                    onClick={Toggle} 
+                    style={{marginBottom:"1rem"}} 
+                    id="EngProjectDesc" 
+                    className="infoBtn"
+                    ref={D => engButton = D}
+                >
                     Project info
                 </Button>
                     <Collapse isOpen = {isOpen}>

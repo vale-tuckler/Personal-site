@@ -15,7 +15,7 @@ const Home = ()=>{
         mytl
             .fromTo([AboutLink, ProjectsLink],
                 {visibility:"hidden", opacity:0},
-                {visibility:"visible", opacity:1, duration:1, ease:Power4.easeInOut, stagger:0.5})
+                {visibility:"visible", opacity:1, duration:1, ease:Power4.easeInOut, stagger:0.45})
             .fromTo(Name, 
                 {visibility:"hidden", opacity:0},
                 {visibility:"visible", opacity:1, duration:1, delay:1, ease:Power4.easeOut})

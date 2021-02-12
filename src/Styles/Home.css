@@ -81,29 +81,30 @@ body{
     #projects{
         display:inline-flex;
         align-self: center;
-        margin-top: 5%;
+        margin-top: 20%;
         margin-left:28%;
-        font-size:120%;
+        font-size:140%;
     }
     #about-me{
         display:inline-flex;
         align-self: center;
-        margin-top: 5%; 
+        margin-top: 18%; 
         margin-left:14%;                
-        font-size: 120%;        
+        font-size: 140%;        
     }
     #name{
-        margin-top:30%;
+        margin-top:35%;
         font-size:200%;
     }
     #occupation{
         margin-top:2.5%;    
-        font-size:125%;
-        margin-left:30%;
+        font-size:130%;
+        margin-left:32.5vw;
     }
     #banner{
         margin-top:2.5%;
-        font-size:110%;
-        margin-left:10%;
+        font-size:120%;
+        margin-right:15vw;
+        margin-left:7.8vw;
     }
 }
