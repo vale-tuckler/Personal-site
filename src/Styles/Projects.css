@@ -17,19 +17,29 @@ body{
     display:inline-block;
 }
 #ignacio{
-    margin-top:20%;
+    margin-top:10%;
     border-radius: 5px;
     visibility: hidden;
     opacity: 0;
 }
+#Jordan{
+    margin-top:35%;
+    border-radius:5px;
+    width:100%;
+    height:100%;
+    margin-left:45%;
+    opacity:0;
+    visibility: hidden;
+}
 #dogs{
-    margin-top:3%;
+    margin-top:10%;
     border-radius: 5px;
     height:15%;
     width:100%;
     opacity:1;
 }
 #dogsImg{
+    margin-top:10%;
     object-fit: cover;
     width:100%;
     height:30%;
@@ -39,15 +49,6 @@ body{
 #dogs:hover{
     opacity:0.5;
 }
-#Jordan{
-    margin-top:30%;
-    border-radius:5px;
-    width:100%;
-    height:100%;
-    margin-left:45%;
-    opacity:0;
-    visibility: hidden;
-}
 #jorImg{
     margin-top:20%;
 }
@@ -55,20 +56,21 @@ body{
     opacity: 0.5;
 }
 #home-cont{
-    margin-left:15%;
+    display:inline-block;    
+    margin-top:5%;
+    margin-left:12%;
     padding:1%;    
     opacity:0.6;
 }
 #about-cont{
-    margin-left:50%;
-    margin-top:25%;
+    display:inline;
+    margin-left:55%;    
     padding:1%;
     opacity:0.6;
 }
 #home-link{
     text-decoration:none;
-    padding:1%;
-    margin-top:35%;
+    padding:25%;
     font-size: 140%;
     font-family:"coves";    
     opacity:0.6;
@@ -78,7 +80,6 @@ body{
 #about-link{
     text-decoration:none;
     font-size: 140%;
-    margin-top:35%;
     padding:1%;
     font-family:"coves";
     opacity:0.6;
@@ -87,6 +88,7 @@ body{
 }
 #navigation{
     display:inline;
+    padding:1%; 
 }
 #home-link:hover{
     border: 1.5px solid white;
@@ -108,16 +110,19 @@ body{
     padding:2%;
     margin-top:7%;
     visibility:hidden;
+    opacity:0;
 }
 #DogsProjectDesc{
     margin-top:7%;
     padding:1.5%;
     visibility:hidden;
+    opacity:0;
 }
-#JorProjectDes{
+#JorProjectDesc{
     margin-top:5%;
     padding:1.5%;
     visibility:hidden;
+    opacity:0;
 
 }
 .card{
@@ -148,62 +153,66 @@ body{
 }
 
 /*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width:600px){
-    #home-link{
-        font-size:120%;
-        display: inline;
-        align-self: center;
-        margin-top:15%;
-    }
-    #about-link{
-        font-size:120%;        
-        display:inline;
-        align-self: center;
-        margin-top:15%;
-    }
-    #home-cont{
-        margin-top:20%;
-    } 
-    #about-cont{        
-        margin-top:10%;
-    }
-}
-/*Small devices (portrait tablets, 768px and up)*/
-@media only screen and (min-width:600px){
+@media only screen and (max-width:650px){
     #home-link{
         font-size:140%;
+        font-weight:bold;
         display: inline;
         align-self: center;
+        margin-left:5%;
     }
     #about-link{
+        margin-left:-15%;
+        font-weight:bold;
         font-size:140%;        
-        display:inline;
-        align-self: center;
+        display:inline-flex;
+        align-self: center;        
     }
     #home-cont{
-        margin-top:30%;
+        margin-top:15%;
     } 
     #about-cont{        
-        margin-top:30%;
+        margin-top:15%;
+    }
+    .infoBtn{
+        width:50%;
+        font-size:110%;
+        margin-left:35% !important;
+    }
+    #contactMe{
+        margin-left:40%;
+        font-size:120%;
+        width:30%;
+        display:inline-flex;
+        margin-bottom:2%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width:768px){
+@media only screen and (max-width:768px){
     #home-link{
-        font-size:150%;
-        display: inline;
+        font-size:140%;
+        font-weight:bold;
+        display: inline-flex;
         align-self: center;
+        letter-spacing: 1px;
     }
     #about-link{
-        font-size:150%;        
+        font-size:140%;     
+        font-weight:bold;   
         display:inline;
         align-self: center;
+        letter-spacing: 1px;
+    }
+    .infoBtn{
+        width:50%;
+        font-size:110%;
+        margin-left:70% !important;
     }
     #home-cont{
-        margin-top:30%;
+        margin-top:15%;
     } 
     #about-cont{        
-        margin-top:30%;
+        margin-top:15%;
     }
 }

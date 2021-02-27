@@ -35,14 +35,14 @@ const Projects = () =>{
         let PowerTwo = gsap.parseEase("power2.out");        
         let Sine = gsap.parseEase("sine.out");
         
-        let myTL = gsap.timeline({delay:1});
+        let myTL = gsap.timeline({delay:0.5});
         console.log([homeLink, aboutLink]);
         console.log([engProject, dogsProject]);
 
         myTL
             .fromTo([homeLink, aboutLink],
                 {visibility:"hidden", opacity:0},
-                {duration:2, visibility:"visible", ease:PowerTwo, stagger:0.45, opacity:1})
+                {duration:2, visibility:"visible", ease:PowerTwo, stagger:0.49, opacity:1})
             .fromTo([archProject, archButton],
                 {visibility:"hidden", opacity:0},
                 {scrollTrigger:{
@@ -67,7 +67,7 @@ const Projects = () =>{
                     },
                     visibility:"visible", ease:Sine, opacity:1, duration:1, delay:0.5
                 })
-            .then(myTL.kill);
+           // .then(myTL.kill);
         return myTL;
     }
         const Rerun = false;
@@ -79,10 +79,10 @@ const Projects = () =>{
         <div id="projectsCont">
             <nav id="navigation">
                 <span id="home-cont">
-                    <a href="/home" id="home-link" ref={h => homeLink = h} className="navLink">Home</a>
+                    <a href="/home" id="home-link" ref={home => homeLink = home} className="navLink">Home</a>
                 </span>
                 <span id="about-cont">
-                    <a href="/about-me" id="about-link" ref={a => aboutLink = a} className="navLink">About Me</a>                
+                    <a href="/about-me" id="about-link" ref={about => aboutLink = about} className="navLink">About Me</a>                
                 </span>                            
             </nav>
 
@@ -91,18 +91,21 @@ const Projects = () =>{
 
             <div className="projects-img">
                 <a href="https://architect-jordan.firebaseapp.com/home.html" id="jorImg">
-                    <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan" ref={J => archProject = J}/>
+                    <img src={blackBuilding} alt="blackbuilding" title="Jordan's project" id="Jordan" ref={archPro => archProject = archPro}/>
                 </a>
-                <Button 
-                    color="btn btn-dark" 
-                    onClick={Unfold} 
-                    style={{marginBottom:"1rem"}} 
-                    id="JorProjectDesc" 
-                    className="infoBtn" 
-                    ref={A => archButton = A }
+                <div 
+                    ref={archB => archButton = archB} 
+                    id="JorProjectDesc"
                 >
-                        Project info
-                </Button>                
+                    <Button 
+                        color="btn btn-dark" 
+                        onClick={Unfold} 
+                        style={{marginBottom:"1rem", padding:"1.5%"}}                     
+                        className="infoBtn"                         
+                    >
+                            Project info
+                    </Button>
+                </div>                                
                 <Collapse isOpen={Extended}>
                     <Card className="card">
                         <CardBody>
@@ -131,18 +134,21 @@ const Projects = () =>{
 
         <div className="projects-img">
                 <a href="https://padebac.web.app/inicio" id="dogs">
-                    <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={D => dogsProject = D}/> 
+                    <img src={Padebac} alt="Padebac's site" title="Padebac site" id="dogsImg" ref={dogsP => dogsProject = dogsP}/> 
                 </a>
-                <Button 
-                    color="btn btn-dark" 
-                    onClick={Switch} 
-                    style={{marginBottom:"1rem"}} 
-                    id="DogsProjectDesc" 
-                    className="infoBtn"
-                    ref={X => dogsButton = X}
+                <div 
+                    ref={X => dogsButton = X} 
+                    id="DogsProjectDesc"
                 >
-                        Project info
-                </Button>
+                    <Button 
+                        color="btn btn-dark" 
+                        onClick={Switch} 
+                        style={{marginBottom:"1rem", padding:"1.5%"}}                          
+                        className="infoBtn"                        
+                    >
+                            Project info
+                    </Button>
+                </div>                
                 <Collapse isOpen={Open}>
                     <Card className="card">
                         <CardBody>
@@ -180,16 +186,19 @@ const Projects = () =>{
                 <a href="https://profe-ignacio.web.app/inicio" id="ignacioLink">
                     <img src={Teacher} alt="Project1" title="English site project" id="ignacio" ref={e => engProject = e}/>
                 </a>
-                <Button 
-                    color="btn btn-dark" 
-                    onClick={Toggle} 
-                    style={{marginBottom:"1rem"}} 
+                <div 
+                    ref={eng => engButton = eng}
                     id="EngProjectDesc" 
-                    className="infoBtn"
-                    ref={D => engButton = D}
                 >
-                    Project info
-                </Button>
+                    <Button 
+                        color="btn btn-dark" 
+                        onClick={Toggle} 
+                        style={{marginBottom:"1rem", padding:"1.5%"}}                 
+                        className="infoBtn"                        
+                    >
+                        Project info
+                    </Button>                
+                </div>
                     <Collapse isOpen = {isOpen}>
                         <Card className="card">
                             <CardBody>
