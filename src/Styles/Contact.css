@@ -4,7 +4,7 @@ body{
 }
 #contactContainer{
     /*background-color:#f29e4c;*/
-    background-color: #4361ee;
+    background-color: #DDCECD;
     height:110vh;
     font-family:"coves";
 }
@@ -25,6 +25,9 @@ body{
     color: #17183B;
     padding:1%;
     text-decoration:none;
+}
+#linkProjectsCont{
+    background-color: #DDCECD;
 }
 .Nlink{
     margin-top:5%;
@@ -61,4 +64,139 @@ body{
     margin-left:38%;
     margin-top:3%;
     margin-bottom:5%;
+}
+
+@media only screen and (max-width:650px){
+    #contactContainer{        
+        height:100vh;
+        font-family:"coves";
+    }
+    #Homelink{
+        display:inline-flex;
+        margin-left:12%;
+        font-size: 140%;
+        font-family:"coves";    
+        font-weight:lighter;
+        color: #17183B;
+        padding:1%;
+        text-decoration:none;
+    }
+    #Projectslink{
+        display:inline-flex;
+        margin-left:40%;    
+        font-size: 140%;
+        font-family:"coves";    
+        font-weight:lighter;
+        color: #17183B;
+        padding:1%;
+        text-decoration:none;
+    }
+    #homeCont, #linkProjectsCont{
+        display:inline-flex;
+        background-color: #DDCECD;
+        margin-top:20%;
+        margin-bottom:8%;
+    }
+    #homeCont{
+        margin-left:14%;
+    }
+    #linkProjectsCont{
+        margin-left:20%;
+        background-color: #DDCECD;
+    }
+    #motto{
+        margin-left:15%;
+        font-size:178%;
+        font-weight:bolder;
+    }
+    .description{
+        margin-top:12%;
+        margin-left:15% !important;
+        margin-right:10%;
+        
+        font-style: italic;
+    }
+    #smContainer{
+        margin-left:30%;
+        margin-top:8%;
+    }
+    .sm-icon{
+        display:block;
+        visibility:visible;
+        color:none;
+    }
+    #github, #ig, #mail{
+        width:50%;
+        height:50%;        
+        margin:5%;
+        opacity:1;
+    }
+
+
+}
+@media only screen and (max-width:800px){
+    #contactContainer{        
+        height:100vh;
+        font-family:"coves";
+    }
+    #Homelink{
+        display:inline-flex;
+        margin-left:12%;
+        font-size: 140%;
+        font-family:"coves";    
+        font-weight:lighter;
+        color: #17183B;
+        padding:1%;
+        text-decoration:none;
+    }
+    #Projectslink{
+        display:inline-flex;
+        margin-left:40%;    
+        font-size: 140%;
+        font-family:"coves";    
+        font-weight:lighter;
+        color: #17183B;
+        padding:1%;
+        text-decoration:none;
+    }
+    #homeCont, #linkProjectsCont{
+        display:inline-flex;
+        background-color: #DDCECD;
+        margin-top:20%;
+        margin-bottom:8%;
+    }
+    #homeCont{
+        margin-left:14%;
+    }
+    #linkProjectsCont{
+        margin-left:20%;
+        background-color: #DDCECD;
+    }
+    #motto{
+        margin-left:15%;
+        font-size:178%;
+        font-weight:bolder;
+    }
+    .description{
+        margin-top:12%;
+        margin-left:15% !important;
+        margin-right:10%;
+        
+        font-style: italic;
+    }
+    #smContainer{
+        margin-left:30%;
+        margin-top:8%;
+    }
+    .sm-icon{
+        display:block;
+        visibility:visible;
+        color:none;
+    }
+    #github, #ig, #mail{
+        width:50%;
+        height:50%;        
+        margin:5%;
+        opacity:1;
+    }
 }

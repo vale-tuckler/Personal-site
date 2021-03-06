@@ -43,10 +43,10 @@ const Contact = () => {
     return(
         <div id="contactContainer">
             <nav>
-                <span>
+                <span id="homeCont">
                     <a href="/home" id="Homelink" className="Nlink" ref={home => Hlink = home}>Home</a>
                 </span>
-                <span>
+                <span id="linkProjectsCont">
                     <a href="/projects" id="Projectslink" className="Nlink" ref={projects => Plink = projects}>Projects</a>
                 </span>                
             </nav>            

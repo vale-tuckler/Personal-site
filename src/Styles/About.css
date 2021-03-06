@@ -4,11 +4,11 @@ body{
 }
 #aboutContainer{
     /*background-color:#2ec4b6;*/
-    background-color:#3a0ca3;
+    background-color:#37392E;
     font-family:"coves";
     /*color:black;*/
     color:white; 
-    height:165vh;
+    height:170vh;
 }
 #quick-bio{
     text-align:center;
@@ -73,14 +73,14 @@ body{
     font-size: 120%;
 }
 #link-container{
-    margin-top:10%;
+    margin-top:5%;
+    margin-bottom:-2% !important;
 }
 #contactLink{
-    margin-left:44%;
+    margin-left:44%;    
     font-size:160%;
     padding-left:2%;
     padding-right:2%;
-    padding-bottom:1%;
     letter-spacing:1px;
     color:white;
 } 
@@ -97,7 +97,7 @@ body{
 }
 #myJourney{
  /*   background-color: #2ec4b6;*/
- background-color:#3a0ca3;
+ background-color:#37392E;
  color:black;
 }
 
@@ -156,22 +156,52 @@ body{
 @media only screen and (max-width:800px){
     #projectsLink{
         display:inline-flex;
-        padding: 2%;
-        margin-left:50%;
-        margin-top: 15%;
+        padding:2%;
+        margin-left:50% !important;
+        margin-top:15% !important;
     }
     #projectsLink:hover{
         padding:1.5%;
     }
+    
     #homeLink:hover{
-        padding:1%;
+        padding:2%;
+    }
+    .link{
+        margin-bottom:0.5%;
     }
     #homeContainer{
         display:inline-flex;
-        margin-left:9%;
+        margin-left:9%;        
+    }
+    #projectsContainer{
+        display:inline-flex;
+        margin-left:30%;
+        margin-top:15%;
+        margin-bottom:5%;
+    }
+    #quick-bio, #skills{
+        font-size:220%;
+    }
+    #bioText, #skillSection{
+        font-size:130%;
+        margin-right:13%;        
     }
     #listCont{
-        margin-right:25%;
-        margin-left:-15%;
+        margin-right:28%;
+    }   
+    #contactLink{
+        margin-left:40%;          
+        font-size:160%;
+        margin-top:-5%;
+        margin-bottom:8% !important;
+        padding: 1% 1% 0.5% 1%; /* top right bottom left  */
+        letter-spacing:1px;
+        color:white;
+    }
+    #link-container{
+        margin-top:10%;
+        margin-bottom:15% !important;
+        padding-bottom:1%;
     }
 }

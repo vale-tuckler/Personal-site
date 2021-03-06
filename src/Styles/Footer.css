@@ -3,10 +3,25 @@
     width:20%;
 }
 #wrapper{
-    margin-left:35%;
+    margin-left:40%;
     margin-top:5%;
 }
-#github, #mail, #ig{
+#Github, #Mail, #Ig{
     width:10%;
     height:10%;
+    margin:1%;
+}
+
+@media only screen and (max-width:650px){
+    #wrapper{
+        margin-top:10%;
+        margin-left: 40%;
+        margin-bottom:5%;
+    }
+    #Github, #Mail, #Ig{
+        display:block;
+        margin-top:10%;
+        width:32%;
+        height:32%;
+    }
 }

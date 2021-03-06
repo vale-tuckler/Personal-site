@@ -112,14 +112,10 @@ const AboutMe = () => {
                                 </p>
                                 <p className="text">
                                 I was born in Nicaragua, a very small country in Central America. 
-                                I moved to my dad’s house in Mexico to study Computer Engineering, 
-                                but faced a lot of friction from his family in Mexico to the point where 
-                                I wasn’t allowed to study in the house because I took too much space 
-                                with my books and computer. 
-                                I decided I had to move out of the house, but I didn’t know how to. 
+                                I moved to my dad’s house in Mexico to study Computer Engineering.                            
                                 </p>
                                 <p className="text">
-                                At the same time, college was going great, 
+                                College was going great, 
                                 but I needed a challenge, something new to learn 
                                 and be motivated while taking on that challenge.  
                                 I rememeber spending a lot of time on Tumblr 
@@ -130,14 +126,6 @@ const AboutMe = () => {
                                 outside of any social media site. 
                                   I figured that doing that meant I had to develop a site myself, 
                                 so I started learning web development in a very casual and hobby-like manner, 
-                                until a fight happened at home with my dad’s family. 
-                                The house was very small, I knew I was considered an intruder, 
-                                and I couldn’t blame them, so I took it as another sign that I had to leave the house. 
-                                That’s when I connected the dots and thought that maybe my hobby 
-                                was going to be my exit door after 
-                                thinking and thinking for a way out of my dad’s house for about 6 months. 
-                                I did the research and looked at job applications for web developer positions 
-                                and started to write down all the technologies that appeared more than 5 times, 
                                 I made a study plan that took me a year and a half to complete, 
                                 and this portfolio is the result of it. 
                                 </p>

@@ -3,7 +3,8 @@ body{
     padding:0;
 }
 #projectsCont{
-   background-color: #7209b7;
+    
+   background-color: #19647E !important;
     font-family:"coves";
 }
 .projects-img{
@@ -13,17 +14,17 @@ body{
 #ignacio, #dogs{
     width:100%;
     height:100%;
+    border-radius:5px !important;
     margin-left:45%;
     display:inline-block;
 }
 #ignacio{
     margin-top:10%;
-    border-radius: 5px;
     visibility: hidden;
     opacity: 0;
 }
 #Jordan{
-    margin-top:35%;
+    margin-top:25%;
     border-radius:5px;
     width:100%;
     height:100%;
@@ -33,7 +34,6 @@ body{
 }
 #dogs{
     margin-top:10%;
-    border-radius: 5px;
     height:15%;
     width:100%;
     opacity:1;
@@ -50,7 +50,7 @@ body{
     opacity:0.5;
 }
 #jorImg{
-    margin-top:20%;
+    margin-top:10% !important;
 }
 #jorImg:hover{
     opacity: 0.5;
@@ -74,8 +74,9 @@ body{
     font-size: 140%;
     font-family:"coves";    
     opacity:0.6;
-    font-weight:bolder;
+    font-weight:lighter;
     color:black;
+    letter-spacing: 1px;
 }
 #about-link{
     text-decoration:none;
@@ -83,8 +84,9 @@ body{
     padding:1%;
     font-family:"coves";
     opacity:0.6;
-    font-weight:bolder;
+    font-weight:lighter;
     color:black;
+    letter-spacing: 1px;
 }
 #navigation{
     display:inline;
@@ -141,7 +143,7 @@ body{
     padding:1.8%;
     padding-bottom:3%;
     width:17%;
-    background-color: #7209b7;
+    background-color: #19647E;
 }
 #contactMe:hover{
     text-decoration-line: overline;
@@ -156,23 +158,25 @@ body{
 @media only screen and (max-width:650px){
     #home-link{
         font-size:140%;
-        font-weight:bold;
+        font-weight:lighter;
         display: inline;
         align-self: center;
         margin-left:5%;
     }
     #about-link{
         margin-left:-15%;
-        font-weight:bold;
+        font-weight:lighter;
         font-size:140%;        
         display:inline-flex;
         align-self: center;        
     }
     #home-cont{
         margin-top:15%;
+        margin-left:10%;
     } 
     #about-cont{        
         margin-top:15%;
+        margin-left:44%;
     }
     .infoBtn{
         width:50%;
@@ -180,11 +184,11 @@ body{
         margin-left:35% !important;
     }
     #contactMe{
-        margin-left:40%;
+        margin-left:35%;
         font-size:120%;
-        width:30%;
+        width:50%;
         display:inline-flex;
-        margin-bottom:2%;
+        margin-bottom:2.5%;
     }
 }
 
@@ -211,8 +215,17 @@ body{
     }
     #home-cont{
         margin-top:15%;
+        margin-left:15%;
     } 
     #about-cont{        
         margin-top:15%;
+        margin-left:40%;
+    }
+    #contactMe{
+        margin-left:35%;
+        font-size:120%;
+        width:40%;
+        display:inline-flex;
+        margin-bottom:2%;
     }
 }
