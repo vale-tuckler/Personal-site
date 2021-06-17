@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect} from 'react';
 import { gsap, Power3 } from 'gsap';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import '../Styles/About.css';
+import web from '../Images/web.png';
 
 const AboutMe = () => {
 
@@ -83,7 +84,7 @@ const AboutMe = () => {
                     </span>
                     <section id="skillSection" ref={elem => Skillstext = elem}>
                         <ul id="listCont">
-                            <li className="text">HTML5.</li>
+                            <li className="text">{web}</li>
                             <li className="text">CSS3 (Bootstrap and CSS).</li>
                             <li className="text">JavaScript (ES9).</li>
                             <li className="text">ReactJS (V.16.13).</li>
@@ -96,7 +97,7 @@ const AboutMe = () => {
                                 MongoDB.
                                 </a>
                             </li>                                                        
-                            <li className="text">Currently learning Java.</li>
+                            <li className="text">Currently learning Python.</li>
                         </ul>
                     </section>
                 </article>  
@@ -118,12 +119,12 @@ const AboutMe = () => {
                                 College was going great, 
                                 but I needed a challenge, something new to learn 
                                 and be motivated while taking on that challenge.  
-                                I rememeber spending a lot of time on Tumblr 
-                                reading conspiracy theories in my free time and discussing them with others, 
+                                I rememeber spending a lot of time on Tumblr discussing lots of topics
+                                with others, 
                                 enjoying the sense of community that it provided me. 
-                                And I decided I wanted to build platforms so that other people 
-                                also had a chance of sharing their own conspiracy theories 
-                                outside of any social media site. 
+                                This is why I decided I wanted to build platforms so that other people 
+                                had an online space of their own to share their own experiences or ideas  
+                                outside of any conventional social media site. 
                                   I figured that doing that meant I had to develop a site myself, 
                                 so I started learning web development in a very casual and hobby-like manner, 
                                 I made a study plan that took me a year and a half to complete, 
